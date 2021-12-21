@@ -18,5 +18,6 @@
   
     Button - при нажатии обрабатывается содержимое полей и выводится результат произведённых действий.
                            
-Приложение запускается командой ......\projectTest\Storage> python manage.py runserver
-                           
+До запуска приложения может потребоваться установить зависимости pip install testProject\Storage -r requirements.txt
+
+Приложение запускается командой python testProject\Storage manage.py runserver
