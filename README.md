@@ -20,4 +20,4 @@
                            
 До запуска приложения может потребоваться установить зависимости:  pip install -r Storage\requirements.txt
 
-Приложение запускается командой: python testProject\Storage manage.py runserver
+Приложение запускается командой: python Storage\manage.py runserver
