@@ -1,0 +1,58 @@
+{% extends 'addToStorage/base.html'%}
+
+{% block title %}
+    Тестовый интерфейс
+{% endblock %}
+
+{% block main %}
+
+<form class="form-floating" action="{% url 'store' %}" method="post">
+     {% csrf_token %}
+    <p>
+        <label class="form-label fs-3">{{form.equipment.label}}: </label>{{ form.equipment }}
+    </p>
+    <div class="form-error">{{ form.equipment.errors }}</div>
+    <p>
+        <label class="form-label fs-3" >{{form.serials.label}}: </label>{{ form.serials }}
+    </p>
+    <div class="form-error">{{ form.serials.errors }}</div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+</form>
+
+{% if correct_len > 1 %}
+<div>
+    <span class="fs-5 text-break">Серийные номера <b>{{ correct }}</b> успешно добавлены в базу.</span>
+</div>
+{% endif %}
+
+{% if correct_len == 1 %}
+<div>
+    <span class="fs-5 text-break">Серийный номер <b>{{ correct }}</b> успешно добавлен в базу.</span>
+</div>
+{% endif %}
+
+{% if incorrect_len > 1 %}
+<div>
+   <span class="fs-5 text-break">Серийные номера <b>{{ incorrect }}</b> являются не валидными. </span>
+</div>
+{% endif %}
+
+{% if incorrect_len == 1 %}
+<div>
+   <span class="fs-5 text-break">Серийный номер <b>{{ incorrect }}</b> является не валидным. </span>
+</div>
+{% endif %}
+
+{% if doubles_len > 1 %}
+<div>
+   <span class="fs-5 text-break">Серийные номера <b>{{ doubles }}</b> уже внесены в базу. </span>
+</div>
+{% endif %}
+
+{% if doubles_len == 1 %}
+<div>
+   <span class="fs-5 text-break">Серийный номер <b>{{ doubles }}</b> ранее уже был внесён в базу. </span>
+</div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'addTostorage/base.html'%}
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+{% block main %}
+        <p class="fs-3"> Тестовое задание.<br> Демонстрация интерфейса для добавления оборудования в базу данных.<br>
+            Решение выполнено с помощью фреймворка DJANGO, библиотеки стилей BOOTSTRAP и СУБД SQLite. </p>
+        <a href="{% url 'store'%}" class="link-primary">Перейти к интерфейсу</a>
+{% endblock %}
