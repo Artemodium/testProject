@@ -18,6 +18,6 @@
   
     Button - при нажатии обрабатывается содержимое полей и выводится результат произведённых действий.
                            
-До запуска приложения может потребоваться установить зависимости:  pip install -r Storage\requirements.txt
+До запуска приложения может потребоваться установить зависимости:  pip install -r Storage/requirements.txt
 
-Приложение запускается командой: python Storage\manage.py runserver
+Приложение запускается командой: python Storage/manage.py runserver
